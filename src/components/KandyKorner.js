@@ -1,9 +1,12 @@
 import React from "react"
 // import {Route} from "react-router-dom"
 import "./locations/location.css"
+import "./products/Product.css"
 import "./KandyKorner.css"
 import{LocationProvider} from "./locations/locationProvider"
 import{LocationList} from "./locations/locationList"
+import {Productprovider} from "./products/Productprovider"
+import {ProductList} from "./products/ProductList"
 
 export const KandyKorner = () =>(
     <>
@@ -15,6 +18,13 @@ export const KandyKorner = () =>(
         <LocationProvider>
             < LocationList/>
            </LocationProvider>
+           </article>
+
+           <h2>Product</h2>
+        <article className="products">
+        <Productprovider>
+            < ProductList/>
+           </Productprovider>
            </article>
      </>
 )
