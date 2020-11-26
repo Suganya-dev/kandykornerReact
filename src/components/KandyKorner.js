@@ -1,5 +1,5 @@
 import React from "react"
-// import {Route} from "react-router-dom"
+import {Route} from "react-router-dom"
 import "./locations/location.css"
 import "./products/Product.css"
 import "./KandyKorner.css"
@@ -7,10 +7,17 @@ import{LocationProvider} from "./locations/locationProvider"
 import{LocationList} from "./locations/locationList"
 import {Productprovider} from "./products/Productprovider"
 import {ProductList} from "./products/ProductList"
+import { NavBar } from "./nav/NavBar"
+import { ApplicationViews } from "./ApplicationViews"
 
 export const KandyKorner = () =>(
     <>
-          <h1>Nashville Kandykorner</h1>
+    <NavBar />
+      <ApplicationViews />
+      </>
+)
+
+{/* <h1>Nashville Kandykorner</h1>
           <small>Loving place to have your candies.</small>
 
           <h2>Location</h2>
@@ -25,6 +32,4 @@ export const KandyKorner = () =>(
         <Productprovider>
             < ProductList/>
            </Productprovider>
-           </article>
-     </>
-)
+           </article> */}

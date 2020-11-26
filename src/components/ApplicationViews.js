@@ -8,6 +8,7 @@ import {LocationList} from "./locations/locationList"
 export const ApplicationViews = (props) =>{
     return (
         <>
+        
         <LocationProvider>
         <Route exact path="/locations">
             < LocationList/>
