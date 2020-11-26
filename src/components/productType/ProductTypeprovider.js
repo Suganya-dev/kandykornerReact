@@ -3,7 +3,7 @@ import React, { useState} from "react"
 export const ProductTypeContext  = React.createContext()
 
 export const ProductTypeProvider = (props) =>{
-const[productypes, setproducts] = useState([])
+const[producTypes, setproducts] = useState([])
 
 const getProductType = () =>{
 return fetch ("http://localhost:8088/productTypes")
@@ -25,7 +25,7 @@ const addProductType =(productTypes) =>{
 return (
     <ProductTypeContext.Provider value={
         {
-            productypes, addProductType, getProductType
+            producTypes, addProductType, getProductType
     }}>
         {props.children}
     </ProductTypeContext.Provider>
