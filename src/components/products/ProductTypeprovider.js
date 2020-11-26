@@ -2,7 +2,7 @@ import React, { useState} from "react"
 // import "./location.css"
 export const ProductTypeContext  = React.createContext()
 
-export const ProductTypeList = (props) =>{
+export const ProductTypeProvider = (props) =>{
 const[productypes, setproducts] = useState([])
 
 const getProductType = () =>{

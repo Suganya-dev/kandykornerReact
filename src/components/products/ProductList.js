@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react"
 import "./Product.css"
-import {ProductTypeContext} from "./productType/ProductTypeprovider"
+import {ProductTypeContext} from "./ProductTypeprovider"
 import {ProductContext} from "./Productprovider"
 import {Product} from "./Product"
 
@@ -18,14 +18,18 @@ export const ProductList = () =>{
         <div className ="Products">
         {
            products.map((prod) =>  {
-            const types = productypes.find(p => p.id === prod.productTypeId)
+            const type = productypes.find((p) => p.id === prod.productTypeId)
            
-            return <Product key ={prod.id}
-                    productType = {types}
+            return (
+            <Product key ={prod.id}
+                    productType = {type}
                     />
+            )
                 })
             }
-        </div>)
+            
+        </div>
+        )
         }
 
         
