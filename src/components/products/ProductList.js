@@ -6,7 +6,7 @@ import {Product} from "./Product"
 
 export const ProductList = () =>{
     const{ products, getProducts} = useContext(ProductContext)
-    const{producTypes, getProductType}= useContext(ProductTypeContext)
+    const{productTypes, getProductType}= useContext(ProductTypeContext)
     
     useEffect(() => {
         console.log("ProductList: Initial render before data")
@@ -17,43 +17,27 @@ export const ProductList = () =>{
     return (
         <div className="products">
             {
-        products.map(product => {
-          const productType = producTypes.find(x => x.id === product.productTypeId)
-          
-          console.log(product)
+        products.map((product) => {
+            // debugger
+          const productTypeId = productTypes.find((x) => x.id === product.productTypeId)
+
           return <Product key={product.id}
-            productType={productType}
+            productType={productTypeId}
             products={product} />
-        })}
-        </div>
-        )
-      
-      }
-
-
-
-
-
-
-
-    // return (
-    //     <div className ="Products">
-    //     {
-    //        products.map(prod =>  {
-    //         const type = producTypes.find(p => p.id === prod.productTypeId)
-    //         // console.log(prod)
-           
-    //         return 
-    //         <Product key ={prod.id}
-    //                 productType = {type}
-    //                 products = {prod}
-    //                 />
-            
-    //             })
-    //         }
-            
-    //     </div>
-    //     )
-    //     }
-
         
+        })
+    }
+    </div>
+        )}
+          
+        //   console.log(product)
+          
+        
+
+
+
+
+
+
+
+    
