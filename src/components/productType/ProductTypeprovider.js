@@ -7,7 +7,7 @@ const[productTypes, setproducts] = useState()
 
 const getProductType = () =>{
 return fetch ("http://localhost:8088/productTypes")
-.then(res => res.json)
+.then(res => res.json())
 .then(setproducts)
 }
 
