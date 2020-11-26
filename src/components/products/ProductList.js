@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react"
-import "./location.css"
+import "./Product.css"
 import {ProductContext} from "./Productprovider"
 import {Product} from "./Product"
 

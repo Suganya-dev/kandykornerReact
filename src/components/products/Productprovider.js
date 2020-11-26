@@ -6,12 +6,12 @@ export const Productprovider =(props) =>{
 const[products, setProducts] = useState([])
 
 
-export const getProducts = () =>{
+ const getProducts = () =>{
     return fetch("http://localhost:8088/products")
             .then(res => res.json())
             .then(setProducts)
 }
-export const addProducts = (products) =>{
+ const addProducts = (products) =>{
     return fetch("http://localhost:8088/products",{
     method: "POST",
     headers: {
