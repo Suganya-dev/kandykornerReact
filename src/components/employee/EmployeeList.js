@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react"
 import "./Employee.css"
 import {EmployeeContext} from "./EmployeeProvider"
 import {Employee} from"./Employee"
-import {LocationContext} from "./locations/locationProvider"
+import {LocationContext} from "../locations/locationProvider"
 
 
 export const EmployeeList = () =>{
@@ -23,10 +23,10 @@ export const EmployeeList = () =>{
 
             return< Employee key={emp.id}
              location = {locate}
-             employee = {emp} />
+             employees = {emp} />
         })
     }</div>)
-    
+
         }
         
         
