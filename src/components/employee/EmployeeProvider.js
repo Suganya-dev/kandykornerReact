@@ -3,7 +3,7 @@ import "./Employee.css"
 export const EmployeeContext  = React.createContext()
 
 export const Employeeprovider = (props) =>{
-    const [employees,setEmployees] = useState()
+    const [employees,setEmployees] = useState([])
 
 
 const getEmployees = () =>{
@@ -18,7 +18,7 @@ const addEmployees = employees =>{
     headers:{
         "Content-Type": "application/json"
     },
-    body: JSON.stringify(location)
+    body: JSON.stringify(employees)
 })
 .then(getEmployees)
 }

@@ -13,9 +13,9 @@ export const EmployeeList = () =>{
     },[])
 
     return (
-        <div className ="employees">
+        <div className ="employee">
         {
-           employees.map(loc => <Employee key={loc.id} employee={loc} /> ) 
+           employees.map(loc => <Employee key={loc.id} employees={loc} /> ) 
         }
         
         </div>)
