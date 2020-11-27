@@ -27,9 +27,11 @@ export const ApplicationViews = (props) =>{
            </Productprovider>
 
             <Employeeprovider>
+            <LocationProvider>
             <Route exact path="/employees">
            <EmployeeList/>
                </Route>
+            </LocationProvider>
             </Employeeprovider>
 
            </>
