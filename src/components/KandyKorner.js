@@ -1,35 +1,30 @@
 import React from "react"
-import {Route} from "react-router-dom"
+import {Route,Redirect } from "react-router-dom"
 import "./locations/location.css"
 import "./products/Product.css"
 import "./KandyKorner.css"
-import{LocationProvider} from "./locations/locationProvider"
-import{LocationList} from "./locations/locationList"
-import {Productprovider} from "./products/Productprovider"
-import {ProductList} from "./products/ProductList"
 import { NavBar } from "./nav/NavBar"
 import { ApplicationViews } from "./ApplicationViews"
+import { Login } from "./auth/Login"
+import { Register } from "./auth/Register"
 
 export const KandyKorner = () =>(
     <>
-    <NavBar />
-      <ApplicationViews />
-      </>
+    <Route render={() => {
+            if (localStorage.getItem("kandy_customer")) {
+                return (
+                    <>
+                        <Route render={props => <NavBar {...props} />} />
+                        <Route render={props => <ApplicationViews {...props} />} />
+                    </>
+                )
+            } else {
+                return <Redirect to="/login" />
+            }
+        }} />
+
+        <Route path="/login" render={props => <Login {...props} />} />
+        <Route path="/register" render={props => <Register {...props} />} />
+    </>
 )
 
-{/* <h1>Nashville Kandykorner</h1>
-          <small>Loving place to have your candies.</small>
-
-          <h2>Location</h2>
-        <article className="locations">
-        <LocationProvider>
-            < LocationList/>
-           </LocationProvider>
-           </article>
-
-           <h2>Product</h2>
-        <article className="products">
-        <Productprovider>
-            < ProductList/>
-           </Productprovider>
-           </article> */}
