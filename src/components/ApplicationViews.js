@@ -14,14 +14,14 @@ export const ApplicationViews = (props) =>{
 
         <LocationProvider>
         <Route exact path="/locations">
-            < LocationList/>
+            < LocationList {...props}/>
             </Route>
            </LocationProvider>
 
            <Productprovider>
             <ProductTypeProvider>
            <Route exact path="/products">
-            < ProductList/>
+            < ProductList {...props}/>
             </Route>
            </ProductTypeProvider>
            </Productprovider>

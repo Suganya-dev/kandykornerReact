@@ -3,10 +3,10 @@ import {Route,Redirect } from "react-router-dom"
 import "./locations/location.css"
 import "./products/Product.css"
 import "./KandyKorner.css"
-import { NavBar } from "./nav/NavBar"
-import { ApplicationViews } from "./ApplicationViews"
-import { Login } from "./auth/Login"
-import { Register } from "./auth/Register"
+import {NavBar} from "./nav/NavBar"
+import {ApplicationViews} from "./ApplicationViews"
+import {Login} from "./auth/Login"
+import {Register} from "./auth/Register"
 
 export const KandyKorner = () =>(
     <>

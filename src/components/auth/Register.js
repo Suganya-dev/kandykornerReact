@@ -21,14 +21,14 @@ export const Register = (props) => {
 
         if (password.current.value === verifyPassword.current.value) {
             existingUserCheck()
-                .then((userExists) => {
-                    if (!userExists) {
-                        fetch("http://localhost:8088/customers", {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                            body: JSON.stringify({
+            .then((userExists) => {
+                if (!userExists) {
+                fetch("http://localhost:8088/customers", {
+                     method: "POST",
+                     headers: {
+                        "Content-Type": "application/json"
+                     },
+                         body: JSON.stringify({
                                 email: email.current.value,
                                 password: password.current.value,
                                 name: `${firstName.current.value} ${lastName.current.value}`
