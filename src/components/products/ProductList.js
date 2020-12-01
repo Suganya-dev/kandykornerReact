@@ -16,6 +16,7 @@ export const ProductList = () =>{
 
     return (
         <div className="products">
+     
             {
         products.map((product) => {
             // debugger
