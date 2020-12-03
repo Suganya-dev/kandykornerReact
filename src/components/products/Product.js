@@ -1,6 +1,6 @@
 import React,{useContext} from "react"
 import "./Product.css"
-import {CandyContext} from "../CustomerCandyProvider.js"
+import {CandyContext} from "../Customers/CustomerCandyProvider.js"
 
 export const Product = ({products,productType}) =>{
 

@@ -21,11 +21,12 @@ export const NavBar = (props) => {
                 <Link className="navbar__link" to="/productTypes">productTypes</Link>
         </li>
         <li className="navbar__item">
-                <Link className="navbar__link" to="/customers">customers</Link>
+                <Link className="navbar__link" to="/Customers">customers</Link>
         </li>
         <li className="navbar__item">
                 <Link className="navbar__link" to="/Myorder">My Order</Link>
         </li>
+       
     </ul>
     )
 }
